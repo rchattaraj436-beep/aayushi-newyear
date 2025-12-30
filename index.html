@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For My Aayushi ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      display: none;
+      animation: fadeIn 2s ease-in-out forwards;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .name {
+      font-weight: 600;
+      color: #fff9c4;
+    }
+
+    .open-text {
+      font-size: 1.3rem;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 20px;
+      animation: fall linear infinite;
+      color: #ffdde1;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="open-text" id="openText">
+    💖 Press anywhere to open my heart 💖
+  </div>
+
+  <div class="container" id="content">
+    <h1>For My Aayushi ❤️</h1>
+      My Dearest <span class="name">Aayushi</span>,
+      You are not just the love of my life,  
+      you are my safe place, my strength, and my brightest smile.
+      Every challenge feels easier with you by my side,  
+      and every moment with you feels like a beautiful beginning.
+      Your love inspires me, lifts me up,  
+      and makes me a better person every single day.
+      With you, I feel complete —  
+      like no dream is too far and no night too long.
+      I promise to love you endlessly,  
+      to stand with you in every joy and every storm.
+      You are my dream, my greatest gift, my forever.
+    style="margin-top:20px;font-size:1.3rem;">
+      🎉 Happy New Year 2026 🎉
+      — With all my love,<br>
+      <span class="name">Sougata</span>
+  </div>
+
+  <script>
+    document.body.addEventListener("click", () => {
+      document.getElementById("openText").style.display = "none";
+      document.getElementById("content").style.display = "block";
+      createHearts();
+    });
+
+    function createHearts() {
+      setInterval(() => {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 6000);
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>
